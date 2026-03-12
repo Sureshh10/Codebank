@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Code Bank</title>
+<style>
+body{
+font-family: Arial;
+background:#f4f4f4;
+padding:20px;
+}
+
+h1{
+text-align:center;
+}
+
+.code-box{
+background:white;
+padding:15px;
+margin:20px 0;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+pre{
+background:#272822;
+color:#f8f8f2;
+padding:15px;
+border-radius:5px;
+overflow-x:auto;
+}
+
+button{
+padding:8px 15px;
+border:none;
+background:#007bff;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>My Coding Library</h1>
+
+<div class="code-box">
+<h3>C Program: Hello World</h3>
+<pre id="code1">
+#include<stdio.h>
+int main(){
+printf("Hello World");
+return 0;
+}
+</pre>
+<button onclick="copyCode('code1')">Copy Code</button>
+</div>
+
+<div class="code-box">
+<h3>Python Program</h3>
+<pre id="code2">
+print("Hello World")
+</pre>
+<button onclick="copyCode('code2')">Copy Code</button>
+</div>
+
+<script>
+function copyCode(id){
+var text=document.getElementById(id).innerText;
+navigator.clipboard.writeText(text);
+alert("Code Copied!");
+}
+</script>
+
+</body>
+</html>
